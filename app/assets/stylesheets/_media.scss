@@ -1,0 +1,22 @@
+$break-point-max: (
+    sp: "only screen and (max-width: 767px)",
+    tb: "only screen and (max-width: 992px)",
+    pc: "only screen and (max-width: 1024px)"
+);
+
+@mixin media-max($device) {
+    @media #{map-get($break-point-max, $device)} {
+        @content;
+    }
+}
+
+$break-point-min: (
+    sp: "(min-width: 767px)",
+    tb: "(min-width: 992px)",
+    pc: "(min-width: 1024px)"
+);
+@mixin media-min($device) {
+    @media #{map-get($break-point-min, $device)} {
+        @content;
+    }
+}

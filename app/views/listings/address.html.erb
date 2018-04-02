@@ -1,0 +1,41 @@
+<%= render 'partial/navbar' %>
+
+<div class="container">
+    <div class="col-md-3">
+        <!-- verticalnavbar -->
+        <%= render 'partial/verticalnavbar' %>
+    </div>
+
+    <div class="col-md-9">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="text-center">
+                    <span class="panel-heading-title">住所の編集</span>
+                </div>
+            </div>
+
+            <div class="panel-body">
+
+                <%= form_for @listing do |f| %>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>住所</label>
+                                <%=
+                                    f.text_field :address,
+                                    placeholder: "例：　神奈川県横浜市中区みなとみらい1丁目1-1",
+                                    class: 'form-control'
+                                %>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action">
+                        <%= f.submit "更新", class: "btn btn-danger" %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

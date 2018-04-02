@@ -1,0 +1,22 @@
+
+<div class="jumbotron">
+    <%= render  "partial/navbar" %>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <h1 class="display-3">Hello, world!</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    /*$(function() {
+        $('.navbar').removeClass('navbar-devise');
+        $('.navbar').addClass('navbar-default');
+    });*/
+    //let elm2 = document.getElementsByClassName('navbar');
+    document.getElementsByClassName('navbar')[0].classList.remove('navbar-devise');
+    document.getElementsByClassName('navbar')[0].classList.add('navbar-default');
+</script>

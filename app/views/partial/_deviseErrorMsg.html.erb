@@ -1,0 +1,10 @@
+<!-- deviseにエラーがある場合 -->
+<% unless resource.errors.empty? %>
+    <script>
+        // エラーがある分だけeachで回す
+        // 公式なドキュメントがない場合、「rails devise error message」などでググれば書き方は出てくるはず
+        <% resource.errors.full_messages.each do |msg|  %>
+            toastr.error('<%= msg %>')
+        <% end %>
+    </script>
+<% end %>

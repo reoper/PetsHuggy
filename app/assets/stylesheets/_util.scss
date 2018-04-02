@@ -1,0 +1,17 @@
+$end: 4;
+$step: 25px;
+
+@for $i from 1 through $end {
+    .profile-#{$i} {
+        width: $i * $step;
+        height: $i * $step;
+    }
+}
+
+$bstep: 5px;
+
+@for $i from 1 through $end {
+    .row-space-#{$i} {
+        margin-bottom: ($i * $bstep) + $bstep;
+    }
+}
