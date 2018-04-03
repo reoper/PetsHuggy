@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.2.6'
-gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -20,9 +19,12 @@ gem "paperclip", "~> 6.0.0"
 gem 'dropzonejs-rails'
 gem "figaro", "~> 1.1.0"
 
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # 開発・テスト環境に移動
+  gem 'sqlite3'
 end
 
 group :development do
@@ -33,3 +35,8 @@ group :development do
   gem 'spring'
 end
 
+# 本番環境追加
+group :production do
+  gem 'pg', '0.20.0'
+  gem 'rails_12factor'
+end
