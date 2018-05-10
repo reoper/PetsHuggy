@@ -51,15 +51,4 @@ Rails.application.configure do
       secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
-  # config.paperclip_defaults = {
-  #   storage: :s3,
-  #   s3_protocol: :https,
-  #   bucket: "masahiro-okada-test",
-  #   s3_region: "ap-northeast-1",
-  #   s3_host_name: "s3-ap-northeast-1.amazonaws.com",
-  #   s3_credentials: {
-  #     access_key_id: "AKIAI76LXHAZGW77SDMA",
-  #     secret_access_key: "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"
-  #   }
-  # }
-end
+ end
